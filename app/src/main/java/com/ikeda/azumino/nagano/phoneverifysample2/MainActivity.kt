@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
 
         override fun onVerificationFailed(p0: FirebaseException) {
             Toast.makeText(applicationContext, "SMS認証要求に失敗しました", Toast.LENGTH_SHORT).show()
+            p0.printStackTrace()
         }
 
         override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
